@@ -5,7 +5,7 @@ namespace ChatAPI.Controllers
 {
     public class RoleController : ApiController
     {
-        private IRoleServices _roleServices;
+        private readonly IRoleServices _roleServices;
 
         public RoleController()
         {

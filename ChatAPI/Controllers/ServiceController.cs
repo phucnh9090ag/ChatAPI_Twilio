@@ -5,14 +5,13 @@ namespace ChatAPI.Controllers
 {
     public class ServiceController : ApiController
     {
-        IServiceServices _serviceServices;
+        private readonly IServiceServices _serviceServices;
 
         public ServiceController()
         {
             _serviceServices = new ServiceServices();
         }
 
-        [Route("api/Service")]
         [HttpGet]
         public IHttpActionResult GetListAll()
         {

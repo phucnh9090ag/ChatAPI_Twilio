@@ -5,7 +5,7 @@ namespace ChatAPI.Controllers
 {
     public class UserController : ApiController
     {
-        IUserServices _userServices;
+        private readonly IUserServices _userServices;
 
         public UserController()
         {

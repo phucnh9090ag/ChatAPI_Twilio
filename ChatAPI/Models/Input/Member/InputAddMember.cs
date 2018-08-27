@@ -2,11 +2,11 @@
 {
     public class InputAddMember
     {
-        public string serviceSid { get; set; }
-        public string channelSid { get; set; }
-        public string identity { get; set; }
+        public string ServiceSid { get; set; }
+        public string ChannelSid { get; set; }
+        public string Identity { get; set; }
 
         //Optional
-        public string roleSid { get; set; }
+        public string RoleSid { get; set; }
     }
 }

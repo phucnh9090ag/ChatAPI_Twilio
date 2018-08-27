@@ -21,7 +21,7 @@ namespace ChatAPI.Models
 
         public object CreateService(InputCreateService input)
         {
-            var friendlyName = input.friendlyName;
+            var friendlyName = input.FriendlyName;
 
             var service = ServiceResource.Create(
                 friendlyName: friendlyName
@@ -32,8 +32,8 @@ namespace ChatAPI.Models
 
         public object UpdateService(InputUpdateService input)
         {
-            var friendlyName = input.friendlyName;
-            var serviceSid = input.serviceSid;
+            var friendlyName = input.FriendlyName;
+            var serviceSid = input.ServiceSid;
 
             var service = ServiceResource.Update(
                 friendlyName: friendlyName,
@@ -45,7 +45,7 @@ namespace ChatAPI.Models
 
         public object DeleteService(InputDeleteService input)
         {
-            var serviceSid = input.serviceSid;
+            var serviceSid = input.ServiceSid;
 
             var result = ServiceResource.Delete(pathSid: serviceSid);
 

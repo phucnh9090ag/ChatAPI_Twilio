@@ -5,7 +5,7 @@ namespace ChatAPI.Controllers
 {
     public class MessageController : ApiController
     {
-        IMessageServices _messageServices;
+        private readonly IMessageServices _messageServices;
 
         public MessageController()
         {

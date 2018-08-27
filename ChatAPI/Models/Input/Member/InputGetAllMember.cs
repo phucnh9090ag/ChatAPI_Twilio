@@ -2,7 +2,7 @@
 {
     public class InputGetAllMember
     {
-        public string channelSid { get; set; }
-        public string serviceSid { get; set; }
+        public string ChannelSid { get; set; }
+        public string ServiceSid { get; set; }
     }
 }

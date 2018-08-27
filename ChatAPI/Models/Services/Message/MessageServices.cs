@@ -15,8 +15,8 @@ namespace ChatAPI.Models
         }
         public object GetListAll(InputGetAllMessage input)
         {
-            var serviceSid = input.serviceSid;
-            var channelSid = input.channelSid;
+            var serviceSid = input.ServiceSid;
+            var channelSid = input.ChannelSid;
 
             var messages = MessageResource.Read(
                 pathServiceSid: serviceSid,
@@ -28,13 +28,13 @@ namespace ChatAPI.Models
 
         public object SendMessage(InputSendMessage input)
         {
-            var serviceSid = input.serviceSid;
-            var channelSid = input.channelSid;
-            var body = input.body;
-            var from = input.from;
-            var attribute = input.attribute;
-            var lastUpdateBy = input.lastUpdateBy;
-            var mediaSid = input.mediaSid;
+            var serviceSid = input.ServiceSid;
+            var channelSid = input.ChannelSid;
+            var body = input.Body;
+            var from = input.From;
+            var attribute = input.Attribute;
+            var lastUpdateBy = input.LastUpdateBy;
+            var mediaSid = input.MediaSid;
 
             var message = MessageResource.Create(
                 body: body,
@@ -51,15 +51,15 @@ namespace ChatAPI.Models
 
         public object UpdateMessage(InputUpdateMessage input)
         {
-            var serviceSid = input.serviceSid;
-            var channelSid = input.channelSid;
-            var messageSid = input.messageSid;
-            var body = input.body;
-            var attribute = input.attribute;
-            var dateCreate = input.dateCreate;
-            var dateUpdate = input.dateUpdate;
-            var lasttUpdateBy = input.lastUpdateBy;
-            var from = input.from;
+            var serviceSid = input.ServiceSid;
+            var channelSid = input.ChannelSid;
+            var messageSid = input.MessageSid;
+            var body = input.Body;
+            var attribute = input.Attribute;
+            var dateCreate = input.DateCreate;
+            var dateUpdate = input.DateUpdate;
+            var lasttUpdateBy = input.LastUpdateBy;
+            var from = input.From;
 
             var message = MessageResource.Update(
                 pathServiceSid: serviceSid,
@@ -78,9 +78,9 @@ namespace ChatAPI.Models
 
         public object DeleteMessage(InputDeleteMessage input)
         {
-            var serviceSid = input.serviceSid;
-            var channelSid = input.channelSid;
-            var messageSid = input.messageSid;
+            var serviceSid = input.ServiceSid;
+            var channelSid = input.ChannelSid;
+            var messageSid = input.MessageSid;
 
             var result = MessageResource.Delete(
                 pathServiceSid: serviceSid,

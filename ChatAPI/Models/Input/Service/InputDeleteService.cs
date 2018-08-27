@@ -2,6 +2,6 @@
 {
     public class InputDeleteService
     {
-        public string serviceSid { get; set; }
+        public string ServiceSid { get; set; }
     }
 }

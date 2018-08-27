@@ -2,8 +2,8 @@
 {
     public class InputDeleteMessage
     {
-        public string serviceSid { get; set; }
-        public string channelSid { get; set; }
-        public string messageSid { get; set; }
+        public string ServiceSid { get; set; }
+        public string ChannelSid { get; set; }
+        public string MessageSid { get; set; }
     }
 }

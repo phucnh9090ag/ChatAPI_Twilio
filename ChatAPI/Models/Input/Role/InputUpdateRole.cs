@@ -4,8 +4,8 @@ namespace ChatAPI.Models
 {
     public class InputUpdateRole
     {
-        public string serviceSid { get; set; }
-        public string roleSid { get; set; }
-        public List<string> permission { get; set; }
+        public string ServiceSid { get; set; }
+        public string RoleSid { get; set; }
+        public List<string> Permission { get; set; }
     }
 }

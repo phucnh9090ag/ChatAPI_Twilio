@@ -4,10 +4,10 @@ namespace ChatAPI.Models
 {
     public class InputGetAllInvite
     {
-        public string serviceSid { get; set; }
-        public string channelSid { get; set; }
+        public string ServiceSid { get; set; }
+        public string ChannelSid { get; set; }
 
         //Optional
-        public List<string> identity { get; set; }
+        public List<string> Identity { get; set; }
     }
 }

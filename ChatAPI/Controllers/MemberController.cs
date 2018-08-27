@@ -10,7 +10,7 @@ namespace ChatAPI.Controllers
 {
     public class MemberController : ApiController
     {
-        private IMemberServices _memberServices;
+        private readonly IMemberServices _memberServices;
 
         public MemberController()
         {

@@ -25,6 +25,12 @@ namespace ChatAPI
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            config.Routes.MapHttpRoute(
+                name: "DemoRoute",
+                routeTemplate: "Twilio/{controller}/{serviceSid}",
+                defaults: new { serviceSid = RouteParameter.Optional }
+            );
         }
     }
 }

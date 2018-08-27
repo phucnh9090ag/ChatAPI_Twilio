@@ -4,17 +4,17 @@ namespace ChatAPI.Models
 {
     public class InputUpdateMessage
     {
-        public string serviceSid { get; set; }
-        public string channelSid { get; set; }
-        public string messageSid { get; set; }
+        public string ServiceSid { get; set; }
+        public string ChannelSid { get; set; }
+        public string MessageSid { get; set; }
 
         //Optional
-        public string body { get; set; }
-        public string from { get; set; }
-        public string attribute { get; set; }
-        public DateTime dateCreate { get; set; }
-        public DateTime dateUpdate { get; set; }
-        public string lastUpdateBy { get; set; }
-        public string mediaSid { get; set; }
+        public string Body { get; set; }
+        public string From { get; set; }
+        public string Attribute { get; set; }
+        public DateTime DateCreate { get; set; }
+        public DateTime DateUpdate { get; set; }
+        public string LastUpdateBy { get; set; }
+        public string MediaSid { get; set; }
     }
 }

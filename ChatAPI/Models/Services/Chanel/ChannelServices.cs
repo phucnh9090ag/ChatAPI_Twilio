@@ -14,10 +14,10 @@ namespace ChatAPI.Models
         }
         public object CreateChannel(InputCreateChannel input)
         {
-            var friendlyName = input.friendlyName;
-            var uniqueName = input.uniqueName;
-            var attributes = input.attributes;
-            var serviceSid = input.serviceSid;
+            var friendlyName = input.FriendlyName;
+            var uniqueName = input.UniqueName;
+            var attributes = input.Attributes;
+            var serviceSid = input.ServiceSid;
 
             var channel = ChannelResource.Create(
                 pathServiceSid: serviceSid,
@@ -31,7 +31,7 @@ namespace ChatAPI.Models
 
         public object GetAllChannel(InputGetAllChannel input)
         {
-            var serviceSid = input.serviceSid;
+            var serviceSid = input.ServiceSid;
 
             var channels = ChannelResource.Read(
                 pathServiceSid: serviceSid
@@ -42,11 +42,11 @@ namespace ChatAPI.Models
 
         public object UpdateChannel(InputUpdateChannel input)
         {
-            var serviceSid = input.serviceSid;
-            var friendlyName = input.friendlyName;
-            var channelSid = input.channelSid;
-            var uniqueName = input.uniqueName;
-            var attributes = input.attributes;
+            var serviceSid = input.ServiceSid;
+            var friendlyName = input.FriendlyName;
+            var channelSid = input.ChannelSid;
+            var uniqueName = input.UniqueName;
+            var attributes = input.Attributes;
 
             var channel = ChannelResource.Update(
                 pathServiceSid: serviceSid,
@@ -61,8 +61,8 @@ namespace ChatAPI.Models
 
         public object DeleteChannel(InputDeleteChannel input)
         {
-            var serviceSid = input.serviceSid;
-            var channelSid = input.channelSid;
+            var serviceSid = input.ServiceSid;
+            var channelSid = input.ChannelSid;
 
             var result = ChannelResource.Delete(
                 pathServiceSid: serviceSid,

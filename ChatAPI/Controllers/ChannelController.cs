@@ -5,7 +5,7 @@ namespace ChatAPI.Controllers
 {
     public class ChannelController : ApiController
     {
-        IChannelServices _channelServices;
+        private readonly IChannelServices _channelServices;
 
         public ChannelController()
         {

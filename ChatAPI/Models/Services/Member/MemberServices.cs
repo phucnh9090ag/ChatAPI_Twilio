@@ -14,8 +14,8 @@ namespace ChatAPI.Models
         }
         public object GetAllMember(InputGetAllMember input)
         {
-            var pathChannelSid = input.channelSid;
-            var serviceSid = input.serviceSid;
+            var pathChannelSid = input.ChannelSid;
+            var serviceSid = input.ServiceSid;
 
             var members = MemberResource.Read(
                 pathServiceSid: serviceSid,
@@ -27,10 +27,10 @@ namespace ChatAPI.Models
 
         public object AddMember(InputAddMember input)
         {
-            var serviceSid = input.serviceSid;
-            var pathChannelSid = input.channelSid;
-            var roleSid = input.roleSid;
-            var indentity = input.identity;
+            var serviceSid = input.ServiceSid;
+            var pathChannelSid = input.ChannelSid;
+            var roleSid = input.RoleSid;
+            var indentity = input.Identity;
 
             var member = MemberResource.Create(
                 identity: indentity,
@@ -44,9 +44,9 @@ namespace ChatAPI.Models
 
         public object RemoveMember(InputRemoveMember input)
         {
-            var serviceSid = input.serviceSid;
-            var channelSid = input.channelSid;
-            var memberSid = input.memberSid;
+            var serviceSid = input.ServiceSid;
+            var channelSid = input.ChannelSid;
+            var memberSid = input.MemberSid;
 
             var result = MemberResource.Delete(
                 pathServiceSid: serviceSid,

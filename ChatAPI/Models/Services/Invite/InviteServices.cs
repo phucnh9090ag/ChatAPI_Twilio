@@ -14,9 +14,9 @@ namespace ChatAPI.Models
         }
         public object GetListAll(InputGetAllInvite input)
         {
-            var serviceSid = input.serviceSid;
-            var channelSid = input.channelSid;
-            var identity = input.identity;
+            var serviceSid = input.ServiceSid;
+            var channelSid = input.ChannelSid;
+            var identity = input.Identity;
 
             var invites = InviteResource.Read(
                 pathServiceSid: serviceSid,
@@ -29,10 +29,10 @@ namespace ChatAPI.Models
 
         public object CreateInvite(InputCreateInvite input)
         {
-            var identity = input.identity;
-            var serviceSid = input.serviceSid;
-            var channelSid = input.channelSid;
-            var roleSid = input.roleSid;
+            var identity = input.Identity;
+            var serviceSid = input.ServiceSid;
+            var channelSid = input.ChannelSid;
+            var roleSid = input.RoleSid;
 
             var invite = InviteResource.Create(
                 identity: identity,
@@ -46,9 +46,9 @@ namespace ChatAPI.Models
 
         public object ReadInvite(InputReadInvite input)
         {
-            var serviceSid = input.serviceSid;
-            var channelSid = input.channelSid;
-            var inviteSid = input.inviteSid;
+            var serviceSid = input.ServiceSid;
+            var channelSid = input.ChannelSid;
+            var inviteSid = input.InviteSid;
 
             var invite = InviteResource.Fetch(
                 pathServiceSid: serviceSid,
@@ -61,9 +61,9 @@ namespace ChatAPI.Models
 
         public object DeleteInvite(InputDeleteInvite input)
         {
-            var serviceSid = input.serviceSid;
-            var channelSid = input.channelSid;
-            var inviteSid = input.inviteSid;
+            var serviceSid = input.ServiceSid;
+            var channelSid = input.ChannelSid;
+            var inviteSid = input.InviteSid;
 
             var result = InviteResource.Delete(
                 pathServiceSid: serviceSid,

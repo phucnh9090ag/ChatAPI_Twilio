@@ -10,7 +10,7 @@ namespace ChatAPI.Controllers
 {
     public class InviteController : ApiController
     {
-        IInviteServices _inviteServices;
+        private readonly IInviteServices _inviteServices;
         public InviteController()
         {
             _inviteServices = new InviteServices();

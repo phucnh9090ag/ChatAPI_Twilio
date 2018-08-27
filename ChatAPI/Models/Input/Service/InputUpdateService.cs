@@ -2,7 +2,7 @@
 {
     public class InputUpdateService
     {
-        public string serviceSid;
-        public string friendlyName { get; set; }
+        public string ServiceSid;
+        public string FriendlyName { get; set; }
     }
 }

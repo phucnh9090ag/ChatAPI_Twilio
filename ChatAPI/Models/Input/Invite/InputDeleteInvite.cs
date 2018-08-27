@@ -2,8 +2,8 @@
 {
     public class InputDeleteInvite
     {
-        public string serviceSid { get; set; }
-        public string channelSid { get; set; }
-        public string inviteSid { get; set; }
+        public string ServiceSid { get; set; }
+        public string ChannelSid { get; set; }
+        public string InviteSid { get; set; }
     }
 }

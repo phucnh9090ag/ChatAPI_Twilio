@@ -2,12 +2,12 @@
 {
     public class InputUpdateChannel
     {
-        public string serviceSid { get; set; }
-        public string channelSid { get; set; }
+        public string ServiceSid { get; set; }
+        public string ChannelSid { get; set; }
 
         //Optional
-        public string friendlyName { get; set; }
-        public string uniqueName { get; set; }
-        public string attributes { get; set; }
+        public string FriendlyName { get; set; }
+        public string UniqueName { get; set; }
+        public string Attributes { get; set; }
     }
 }

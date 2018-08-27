@@ -14,7 +14,7 @@ namespace ChatAPI.Models
         }
         public object GetAllUser(InputGetAllUser input)
         {
-            var serviceSid = input.serviceSid;
+            var serviceSid = input.ServiceSid;
 
             var users = UserResource.Read(
                 pathServiceSid: serviceSid
@@ -25,11 +25,11 @@ namespace ChatAPI.Models
 
         public object CreateUser(InputCreateUser input)
         {
-            var serviceSid = input.serviceSid;
-            var identity = input.identity;
-            var roleSid = input.roleSid;
-            var attribute = input.attributes;
-            var friendlyName = input.friendlyName;
+            var serviceSid = input.ServiceSid;
+            var identity = input.Identity;
+            var roleSid = input.RoleSid;
+            var attribute = input.Attributes;
+            var friendlyName = input.FriendlyName;
 
             var user = UserResource.Create(
                 identity: identity,
@@ -44,11 +44,11 @@ namespace ChatAPI.Models
 
         public object UpdateUser(InputUpdateUser input)
         {
-            var serviceSid = input.serviceSid;
-            var roleSid = input.roleSid;
-            var userSid = input.userSid;
-            var attribute = input.attribute;
-            var friendlyName = input.friendlyName;
+            var serviceSid = input.ServiceSid;
+            var roleSid = input.RoleSid;
+            var userSid = input.UserSid;
+            var attribute = input.Attribute;
+            var friendlyName = input.FriendlyName;
 
             var user = UserResource.Update(
                 roleSid: roleSid,
@@ -63,8 +63,8 @@ namespace ChatAPI.Models
 
         public object DeleteUser(InputDeleteUser input)
         {
-            var serviceSid = input.serviceSid;
-            var userSid = input.userSid;
+            var serviceSid = input.ServiceSid;
+            var userSid = input.UserSid;
 
             var result = UserResource.Delete(
                 pathServiceSid: serviceSid,

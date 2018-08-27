@@ -4,8 +4,9 @@ namespace ChatAPI.Models
 {
     public class InputCreateRole
     {
-        public string serviceSid { get; set; }
-        public string friendlyName { get; set; }
-        public List<string> permission { get; set; }
+        public string ServiceSid { get; set; }
+        public string FriendlyName { get; set; }
+        public string Type; //Deployment or Channel
+        public List<string> Permission { get; set; }
     }
 }

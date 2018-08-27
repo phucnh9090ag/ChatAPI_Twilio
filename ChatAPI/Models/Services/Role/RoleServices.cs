@@ -14,7 +14,7 @@ namespace ChatAPI.Models
         }
         public object GetAllRole(InputGetAllRole input)
         {
-            var serviceSid = input.serviceSid;
+            var serviceSid = input.ServiceSid;
 
             var roles = RoleResource.Read(
                 pathServiceSid: serviceSid
@@ -25,13 +25,18 @@ namespace ChatAPI.Models
 
         public object CreateRole(InputCreateRole input)
         {
-            var serviceSid = input.serviceSid;
-            var permission = input.permission;
-            var friendlyName = input.friendlyName;
+            var serviceSid = input.ServiceSid;
+            var permission = input.Permission;
+            var friendlyName = input.FriendlyName;
+            RoleResource.RoleTypeEnum type;
+            if (input.Type == TypeRole.Channel.ToString())
+                type = RoleResource.RoleTypeEnum.Channel;
+            else 
+                type = RoleResource.RoleTypeEnum.Deployment;
 
             var role = RoleResource.Create(
                 friendlyName: friendlyName,
-                type: RoleResource.RoleTypeEnum.Deployment,
+                type: type,
                 permission: permission,
                 pathServiceSid: serviceSid
             );
@@ -41,9 +46,9 @@ namespace ChatAPI.Models
 
         public object UpdateRole(InputUpdateRole input)
         {
-            var serviceSid = input.serviceSid;
-            var roleSid = input.roleSid;
-            var permission = input.permission;
+            var serviceSid = input.ServiceSid;
+            var roleSid = input.RoleSid;
+            var permission = input.Permission;
 
             var role = RoleResource.Update(
                 permission: permission,
@@ -56,8 +61,8 @@ namespace ChatAPI.Models
 
         public object DeleteRole(InputDeleteRole input)
         {
-            var serviceSid = input.serviceSid;
-            var roleSid = input.roleSid;
+            var serviceSid = input.ServiceSid;
+            var roleSid = input.RoleSid;
 
             var result = RoleResource.Delete(
                 pathServiceSid: serviceSid,
